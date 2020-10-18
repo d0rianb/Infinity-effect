@@ -1,0 +1,22 @@
+{
+    "name": "InfinityBackground",
+    "version": "0.0.1",
+    "description": "A background générator",
+    "main": "src/main.js",
+    "scripts": {
+        "dev": "webpack --watch",
+        "build": "webpack"
+    },
+    "keywords": [],
+    "author": "d0rianb <dorian.beauchesne@icloud.com",
+    "license": "MIT",
+    "dependencies": {
+        "ts-loader": "^6.2.2",
+        "typescript": "^3.8.3",
+        "@dorianb/random-js": "0.0.2"
+    },
+    "devDependencies": {
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11"
+    }
+}
