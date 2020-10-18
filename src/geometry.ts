@@ -6,7 +6,7 @@ class Point {
     public y: number
     public color: string
 
-    constructor(x: number, y: number, color ? : string) {
+    constructor(x: number, y: number, color?: string) {
         this.x = x
         this.y = y
         this.color = color || defaultColor
@@ -17,7 +17,7 @@ class Point {
     }
 
     public dist(point: Point): number {
-        return Math.sqrt((this.x - point.x)**2 + (this.y - point.y)**2)
+        return Math.sqrt((this.x - point.x) ** 2 + (this.y - point.y) ** 2)
     }
 
     public render(ctx: CanvasRenderingContext2D): void {
@@ -40,7 +40,7 @@ class Line {
 
     public render(ctx: CanvasRenderingContext2D): void {
         ctx.beginPath()
-        ctx.moveTo(this.a.x,this.a.y)
+        ctx.moveTo(this.a.x, this.a.y)
         ctx.lineTo(this.b.x, this.b.y)
         ctx.stroke()
     }
@@ -57,7 +57,7 @@ class Triangle {
         this.c = c
     }
 
-    private center(): Point{
+    private center(): Point {
         let centerX: number = (this.a.x + this.b.x + this.c.x) / 3
         let centerY: number = (this.a.y + this.b.y + this.c.y) / 3
         return new Point(centerX, centerY)
@@ -68,7 +68,7 @@ class Triangle {
     }
 
     public render(ctx: CanvasRenderingContext2D): void {
-        ctx.fillStyle = 'rgba(230, 230, 230, .15)'
+        ctx.fillStyle = 'rgba(230, 230, 230, .19)'
         ctx.globalAlpha = 0.08
         ctx.beginPath()
         ctx.moveTo(this.a.x, this.a.y)
